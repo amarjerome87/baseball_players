@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby 
+
+require './lib/baseball_players'
+
+Baseball_Players::CLI.new.call 
