@@ -22,6 +22,10 @@ class BaseballPlayers::CLI
         puts "more info on choosen baseball player 1"
       when "2"
         puts "more info on choosen baseball player 2"
+      when "list"
+        list_players
+      else 
+        puts "Not sure what you want, type list or exit"
       end
     end 
   end 
