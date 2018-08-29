@@ -4,8 +4,7 @@ class BaseballPlayers::Player
 
   def self.rank
     # return players with rank with associated player
-    puts  "1.player_name"
-    puts  "2.player_name"
+
 
     player_1 = player.new
     player_1.name = "Roger Clemens"
@@ -51,6 +50,8 @@ class BaseballPlayers::Player
     player_9.name = "hjk"
     player_9.ranking = "1"
     player_9.summary = "stuff"
+
+    [player_1, player_2, player_3, player_4, player_5, player_6, player_7, player_8, player_9, player_10]
 
 
   end

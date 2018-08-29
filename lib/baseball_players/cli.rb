@@ -15,12 +15,9 @@ class BaseballPlayers::CLI
     input = nil
     while input != "exit"
       input = gets.strip.downcase
-      case input
-      when "1"
-        puts "more info on choosen baseball player 1"
-      when "2"
-        puts "more info on choosen baseball player 2"
-      when "list"
+      if input.to_i > 0
+        puts @players[input.to_i - 1]
+      elsif input == "list"
         list_players
       else
         puts "Not sure what you want, type list or exit"
