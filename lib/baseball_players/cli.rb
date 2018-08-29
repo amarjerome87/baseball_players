@@ -1,4 +1,4 @@
-class Baseball_players::CLI
+class BaseballPlayers::CLI
   
   def call 
     puts "This is a list of great baseball players!"

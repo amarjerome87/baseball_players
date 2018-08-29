@@ -1,5 +1,4 @@
-require "baseball_players/version"
+require_relative "./baseball_players/version"
+require_relative "./baseball_players/cli"
 
-module BaseballPlayers
-  # Your code goes here...
-end
+

@@ -1,5 +1,8 @@
 #!/usr/bin/env ruby 
 
 require './lib/baseball_players'
+require 'pry'
 
-Baseball_Players::CLI.new.call 
+
+
+BaseballPlayers::CLI.new.call 
