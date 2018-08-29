@@ -1,20 +1,18 @@
 class BaseballPlayers::CLI
-  
-  def call 
+
+  def call
     list_players
-    choices 
-  end 
-  
+    choices
+  end
+
   def list_players
     puts "This is a list of great baseball players!"
-    puts  "1.player_name"
-    puts  "2.player_name"
-            
-  end 
-  
-  def choices 
+    @players = BaseballPlayers::Player.rank
+  end
+
+  def choices
     puts "Enetr the number of the player you would like to learn more about or type list to see the player list again or exit to enter"
-    input = nil 
+    input = nil
     while input != "exit"
       input = gets.strip.downcase
       case input
@@ -24,11 +22,11 @@ class BaseballPlayers::CLI
         puts "more info on choosen baseball player 2"
       when "list"
         list_players
-      else 
+      else
         puts "Not sure what you want, type list or exit"
       end
-    end 
-  end 
-  
-  
-end 
+    end
+  end
+
+
+end
