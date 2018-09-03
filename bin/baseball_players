@@ -1,8 +1,7 @@
 #!/usr/bin/env ruby
 
+require './lib/baseball_players'
 require 'pry'
-require "bundler/setup"
-require "baseball_players"
 
 
 

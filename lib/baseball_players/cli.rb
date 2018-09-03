@@ -15,6 +15,7 @@ class BaseballPlayers::CLI
     input = nil
     while input != "exit"
       input = gets.strip.downcase
+
       if input.to_i > 0
         puts @players[input.to_i - 1]
       elsif input == "list"
