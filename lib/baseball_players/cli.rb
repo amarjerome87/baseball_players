@@ -8,13 +8,13 @@ class BaseballPlayers::CLI
   def list_players
     puts "This is a list of great baseball players!"
     @players = BaseballPlayers::Player.rank
-    @players.each.with_index(1) do |deal, i|
-      puts "#{i}. #{deal.name}"
+    @players.each do |player|
+      puts "#{player.name} : #{player.summary}"
     end
   end
 
   def choices
-    puts "Enetr the number of the player you would like to learn more about or type list to see the player list again or exit to enter"
+    puts "Enter the number of the player you would like to learn more about or type list to see the player list again or exit to enter"
     input = nil
     while input != "exit"
       input = gets.strip.downcase
