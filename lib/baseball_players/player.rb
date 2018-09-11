@@ -15,7 +15,7 @@ class BaseballPlayers::Player
     doc = Nokogiri::HTML(open("https://www.britannica.com/list/10-greatest-baseball-players-of-all-time"))
 
     @player = self.new
-    @player.name = doc.css("h2").text
+    @player.name = doc.css("h2").text.scan(/[A-Z][a-z]+/)
     @player.summary = doc.css("p").text
     players <<  @player
   end
