@@ -8,6 +8,9 @@ class BaseballPlayers::CLI
   def list_players
     puts "This is a list of great baseball players!"
     @players = BaseballPlayers::Player.rank
+    @players.each.with_index(1) do |deal, i|
+      puts "#{i}. #{deal.name}"
+    end
   end
 
   def choices
