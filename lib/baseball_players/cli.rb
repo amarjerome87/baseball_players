@@ -8,9 +8,10 @@ class BaseballPlayers::CLI
   def list_players
     puts "This is a list of great baseball players!"
     @players = BaseballPlayers::Player.rank
-    @players.each_with_index do |player, i|
-        puts "#{i + 1}. #{player.name}"
-        binding.pry
+    @players.each do |x|
+      x.name.each_with_index do |y, i|
+        puts "#{i + 1}. #{y}"
+      end
     end
   end
 
