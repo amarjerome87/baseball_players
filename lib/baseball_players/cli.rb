@@ -8,10 +8,8 @@ class BaseballPlayers::CLI
   def list_players
     puts "This is a list of great baseball players!"
     @players = BaseballPlayers::Player.rank
-    @players.each do |x|
-      x.name.each_with_index do |y, i|
-        puts "#{i + 1}. #{y}"
-      end
+    @players.each_with_index do |x, i|
+        puts "#{i + 1}. #{x.name}"
     end
   end
 
@@ -22,7 +20,8 @@ class BaseballPlayers::CLI
       input = gets.strip.downcase
 
       if input.to_i > 0
-        puts @players[input.to_i - 1]
+        player = @players[input.to_i - 1]
+        puts player.summary
       elsif input == "list"
         list_players
       else
