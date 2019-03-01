@@ -1,13 +1,14 @@
 class BaseballPlayers::CLI
 
   def call
+    BaseballPlayers::Scrapper.scrape_players
     list_players
     choices
   end
 
   def list_players
     puts "This is a list of great baseball players!"
-    @players = BaseballPlayers::Player.rank
+    @players = BaseballPlayers::Player.all
     @players.each_with_index do |x, i|
         puts "#{i + 1}. #{x.name}"
     end
@@ -19,7 +20,7 @@ class BaseballPlayers::CLI
     while input != "exit"
       input = gets.strip.downcase
 
-      if input.to_i > 0 && input.to_i < @players.length 
+      if input.to_i > 0 && input.to_i < @players.length
         player = @players[input.to_i - 1]
         puts player.summary
       elsif input == "list"
