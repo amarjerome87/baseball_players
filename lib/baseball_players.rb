@@ -1,6 +1,7 @@
 require_relative "./baseball_players/version"
 require_relative "./baseball_players/cli"
 require_relative "./baseball_players/player"
+require_relative "./baseball_players/scrapper"
 require "pry"
 require "nokogiri"
 require "open-uri"

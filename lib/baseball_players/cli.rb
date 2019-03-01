@@ -19,7 +19,7 @@ class BaseballPlayers::CLI
     while input != "exit"
       input = gets.strip.downcase
 
-      if input.to_i > 0
+      if input.to_i > 0 && input.to_i < @players.length 
         player = @players[input.to_i - 1]
         puts player.summary
       elsif input == "list"
