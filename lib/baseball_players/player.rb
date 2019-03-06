@@ -1,10 +1,10 @@
 class BaseballPlayers::Player
 
   attr_accessor :name, :summary, :player
-  
+
   @@all = []
 
-  def initialize(player)
+  def initialize(player, name, summary)
     @player = player
     @@all << self
   end
